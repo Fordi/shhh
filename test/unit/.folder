@@ -1,0 +1,2 @@
+recurse: false
+description: pure functions, no DB

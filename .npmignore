@@ -1,0 +1,12 @@
+src
+**/.folder
+knexfile.ts
+eslint.config.js
+migrations
+.env.example
+test
+bin/*
+.*
+docs/project-layout.md
+docs/development.md
+**/*.sqlite3

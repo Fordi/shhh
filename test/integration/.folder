@@ -1,0 +1,2 @@
+recurse: false
+description: real server + in-memory sqlite, driven by the AWS SDK
