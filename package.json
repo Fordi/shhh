@@ -3,9 +3,11 @@
   "version": "0.0.1",
   "description": "A self-hosted endpoint for `aws secretsmanager` and `aws ssm` parameter commands",
   "main": "bin/serve.ts",
-  "bin": "dist/shhh.mjs",
+  "bin": {
+    "awshhh": "dist/shhh.mjs"
+  },
   "repository": {
-    "url": "https://github.com/Fordi/shhh.js"
+    "url": "git+https://github.com/Fordi/shhh.git"
   },
   "exports": {
     "node": "./dist/shhh.mjs"
