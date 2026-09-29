@@ -25,7 +25,11 @@ export interface RunningServer {
  * - and only this - on stdout, so it can be captured into an env file.
  */
 export function endpointEnv(endpoint: string): string {
-  return `AWS_ENDPOINT_URL_SECRETS_MANAGER=${endpoint}\nAWS_ENDPOINT_URL_SSM=${endpoint}\n`;
+  return [
+    `export AWS_ENDPOINT_URL_SECRETS_MANAGER=${endpoint}`,
+    `export AWS_ENDPOINT_URL_SSM=${endpoint}`,
+    ``,
+  ].join("\n");
 }
 
 const PROJECT_ROOT = new URL("../", import.meta.url);
