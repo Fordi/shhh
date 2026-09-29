@@ -58,7 +58,7 @@ describe("daemon", () => {
     const { pid, endpoint } = recorded();
     assert.equal(
       stdout,
-      `AWS_ENDPOINT_URL_SECRETS_MANAGER=${endpoint}\nAWS_ENDPOINT_URL_SSM=${endpoint}\n`,
+      `export AWS_ENDPOINT_URL_SECRETS_MANAGER=${endpoint}\nexport AWS_ENDPOINT_URL_SSM=${endpoint}\n`,
     );
     assert.match(stderr, new RegExp(`daemon \\(pid ${pid}\\)`));
     const health = (await (await fetch(`${endpoint}/health`)).json()) as {
