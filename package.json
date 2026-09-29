@@ -1,6 +1,6 @@
 {
   "name": "@fordi-org/shhh",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A self-hosted endpoint for `aws secretsmanager` and `aws ssm` parameter commands",
   "main": "bin/serve.ts",
   "bin": {
